@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <meta name="theme-color" content="#101827"/>
+        <title>SAT English Hub</title>
+        <meta name="description" content="SAT English courses, practice, assignments and student support in one focused learning portal."/>
+        <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <body>
+        <div id="publicShell" class="public-shell">
+            <header class="public-header">
+                <a class="brand" href="#">
+                    <span class="brand-mark">SAT</span>
+                    <span>
+                        <b id="publicBrand">English Hub</b>
+                        <small>Student learning portal</small>
+                    </span>
+                </a>
+                <button class="btn btn-soft" id="openLogin">Sign in</button>
+            </header>
+            <main class="entry-layout">
+                <section class="entry-copy">
+                    <span class="kicker">SAT ENGLISH · DIGITAL FORMAT</span>
+                    <h1 id="heroTitle">
+                        Learn clearly.<br>
+                        <em>Practice smarter.</em>
+                    </h1>
+                    <p id="heroText">Course files, realistic two-module mocks, homework, recordings, weak-point practice and teacher support in one simple place.</p>
+                    <div class="trust-row">
+                        <span>✓ Teacher-managed content</span>
+                        <span>✓ Progress & scores</span>
+                        <span>✓ Parent contact</span>
+                    </div>
+                    <div class="info-note">
+                        <strong>Enrollment is reviewed first</strong>
+                        <p>Complete the form with your payment receipt. Your courses appear after the admin approves your application.</p>
+                    </div>
+                </section>
+                <section class="auth-card" id="authCard">
+                    <div class="tabs">
+                        <button class="tab active" data-auth="apply">New student</button>
+                        <button class="tab" data-auth="login">Sign in</button>
+                    </div>
+                    <form id="applyForm" class="auth-form">
+                        <div class="form-heading">
+                            <h2>Join your course</h2>
+                            <p>All fields are required for approval.</p>
+                        </div>
+                        <label>
+                            Student name<input name="name" autocomplete="name" required placeholder="Full name"/>
+                        </label>
+                        <div class="field-grid">
+                            <label>
+                                Student country
+                                <select name="country" required>
+                                    <option value="20">🇪🇬 Egypt +20</option>
+                                    <option value="966">🇸🇦 Saudi Arabia +966</option>
+                                    <option value="971">🇦🇪 UAE +971</option>
+                                    <option value="965">🇰🇼 Kuwait +965</option>
+                                    <option value="974">🇶🇦 Qatar +974</option>
+                                </select>
+                            </label>
+                            <label>
+                                Student phone<input name="phone" inputmode="tel" required placeholder="01xxxxxxxxx"/>
+                            </label>
+                        </div>
+                        <div class="field-grid">
+                            <label>
+                                Parent country
+                                <select name="parentCountry" required>
+                                    <option value="20">🇪🇬 Egypt +20</option>
+                                    <option value="966">🇸🇦 Saudi Arabia +966</option>
+                                    <option value="971">🇦🇪 UAE +971</option>
+                                    <option value="965">🇰🇼 Kuwait +965</option>
+                                    <option value="974">🇶🇦 Qatar +974</option>
+                                </select>
+                            </label>
+                            <label>
+                                Parent phone<input name="parent" inputmode="tel" required placeholder="01xxxxxxxxx"/>
+                            </label>
+                        </div>
+                        <label>
+                            Grade
+                            <select name="grade" required>
+                                <option value="">Choose grade</option>
+                                <option>Grade 9</option>
+                                <option>Grade 10</option>
+                                <option>Grade 11</option>
+                                <option>Grade 12</option>
+                                <option>Gap year</option>
+                            </select>
+                        </label>
+                        <label>
+                            Course
+                            <select id="applyCourse" name="courseId" required>
+                                <option value="">Choose a course</option>
+                            </select>
+                        </label>
+                        <div class="field-grid">
+                            <label>
+                                Transferred from<input name="transferPhone" inputmode="tel" required placeholder="Wallet / account phone"/>
+                            </label>
+                            <label>
+                                Transfer date<input name="transferDate" type="date" required/>
+                            </label>
+                        </div>
+                        <label>
+                            Payment receipt
+                            <span class="upload-box">
+                                <input id="receipt" name="receipt" type="file" accept="image/*" required/>
+                                <b>Upload receipt image</b>
+                                <small>JPG or PNG · max 5 MB</small>
+                                <span id="receiptName">No file chosen</span>
+                            </span>
+                        </label>
+                        <label>
+                            Create password<input name="password" type="password" minlength="6" required placeholder="At least 6 characters"/>
+                        </label>
+                        <label class="checkline">
+                            <input type="checkbox" required/>I confirm that these details are correct.
+                        </label>
+                        <button class="btn btn-primary btn-block" type="submit">Send application</button>
+                        <p class="form-foot">
+                            Already approved? <button class="link-btn" type="button" data-switch="login">Sign in</button>
+                        </p>
+                    </form>
+                    <form id="loginForm" class="auth-form hidden">
+                        <div class="form-heading">
+                            <h2>Welcome back</h2>
+                            <p>Use the phone number and password on your account.</p>
+                        </div>
+                        <div class="field-grid">
+                            <label>
+                                Country
+                                <select name="country">
+                                    <option value="20">🇪🇬 +20</option>
+                                    <option value="966">🇸🇦 +966</option>
+                                    <option value="971">🇦🇪 +971</option>
+                                    <option value="965">🇰🇼 +965</option>
+                                    <option value="974">🇶🇦 +974</option>
+                                </select>
+                            </label>
+                            <label>
+                                Phone number<input name="phone" inputmode="tel" autocomplete="username" required placeholder="01xxxxxxxxx"/>
+                            </label>
+                        </div>
+                        <label>
+                            Password<input name="password" type="password" autocomplete="current-password" required placeholder="Your password"/>
+                        </label>
+                        <div class="error-box hidden" id="loginError"></div>
+                        <button class="btn btn-primary btn-block" type="submit">Sign in</button>
+                        <button class="link-btn forgot" type="button" id="forgotBtn">Forgot your password?</button>
+                        <div class="demo-box">
+                            <strong>Demo accounts</strong>
+                            <p>Try every view with one click.</p>
+                            <div class="demo-actions">
+                                <button type="button" data-demo="student">Student</button>
+                                <button type="button" data-demo="admin">Admin</button>
+                                <button type="button" data-demo="assistant">Assistant</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="pendingView" class="pending-view hidden">
+                        <span class="pending-icon">⌛</span>
+                        <h2>Application received</h2>
+                        <p>Your payment and information are waiting for admin review. You can sign in after approval.</p>
+                        <button class="btn btn-soft" data-switch="login">Back to sign in</button>
+                    </div>
+                </section>
+            </main>
+            <section class="public-contact">
+                <span>Contact us</span>
+                <div id="contactLinks"></div>
+            </section>
+        </div>
+        <div id="appShell" class="app-shell hidden">
+            <aside class="sidebar">
+                <div class="side-brand brand">
+                    <span class="brand-mark">SAT</span>
+                    <span>
+                        <b>English Hub</b>
+                        <small id="roleLabel">Student portal</small>
+                    </span>
+                </div>
+                <nav id="sideNav"></nav>
+                <div class="side-user">
+                    <div class="avatar" id="userInitials">ST</div>
+                    <div>
+                        <strong id="sideUserName">Student</strong>
+                        <small id="sideUserMeta">Grade 11</small>
+                    </div>
+                    <button id="logoutBtn" aria-label="Sign out" title="Sign out">↪</button>
+                </div>
+            </aside>
+            <header class="mobile-head">
+                <button id="menuBtn" aria-label="Open menu">☰</button>
+                <div class="brand">
+                    <span class="brand-mark">SAT</span>
+                    <b>English Hub</b>
+                </div>
+                <div class="avatar" id="mobileAvatar">ST</div>
+            </header>
+            <main class="app-main">
+                <div id="appContent"></div>
+            </main>
+        </div>
+        <div class="modal hidden" id="modal">
+            <div class="modal-backdrop" data-close-modal></div>
+            <div class="modal-card">
+                <button class="modal-close" data-close-modal aria-label="Close">×</button>
+                <div id="modalContent"></div>
+            </div>
+        </div>
+        <div class="exam-shell hidden" id="examShell"></div>
+        <div class="toast" id="toast" role="status" aria-live="polite"></div>
+        <script src="app.js?v=20261017-restore1"></script>
+        <script type="module">
+            import {mountSiteWidget} from "/_sites/dispatch-assets/sites-widget.js";
+            mountSiteWidget({
+                "kind": "editor-composer",
+                "mobileEnabled": false,
+                "environment": "production",
+                "chatgptOrigin": "https://chatgpt.com",
+                "locale": "en-US",
+                "accountId": "personal",
+                "projectId": "appgprj_6ac05a2d73188191ba19978ca882377b",
+                "projectTitle": "SAT English Hub"
+            });
+        </script>
+    </body>
+</html>
